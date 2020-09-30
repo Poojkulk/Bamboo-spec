@@ -72,13 +72,13 @@ public class PlanSpec {
 
     Project project() {
         return new Project()
-                .name("Project Bamboo12")
-                .key("PRJB2");
+                .name("Project Bamboo123")
+                .key("PRJB23");
     }
     Plan createPlan() {
         return new Plan(
                 project(),
-                "Plan Name", "PLANKEYS")
+                "Plan Name", "PLANKEYS1")
         		.linkedRepositories("Petclinic")
         		.triggers(new RepositoryPollingTrigger())
                // .pollEvery(10, TimeUnit.MINUTES));
@@ -178,7 +178,7 @@ public class PlanSpec {
     }
     
      Deployment createDeployment() {
-        return new Deployment(new PlanIdentifier("PRJB2", "PLANKEYS"),
+        return new Deployment(new PlanIdentifier("PRJB23", "PLANKEYS1"),
                     "myDeployment")
 //        		.releaseNaming(new ReleaseNaming("release-1.1")
 //        		        .autoIncrement(true))
